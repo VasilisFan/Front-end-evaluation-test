@@ -3,3 +3,76 @@
   padding: 0;
   border: 1px solid red;
 }
+
+body {
+  font-family: "Open Sans", sans-serif;
+  height: 100vh;
+  display: grid;
+  grid-template-rows: 1fr 8fr 1fr;
+}
+
+.header,
+.footer {
+  display: grid;
+  grid-template-columns: 1fr 8fr 1fr;
+  background-color: #080c12;
+}
+
+.logoImg,
+.ddMenu {
+  display: grid;
+  align-content: center;
+  justify-content: center;
+}
+
+.ddMenu:hover {
+  cursor: pointer;
+}
+
+.bar1,
+.bar2,
+.bar3 {
+  width: 25px;
+  height: 2px;
+  background-color: #b5d334;
+  border-radius: 2px;
+  margin: 2px 0;
+}
+
+/* .footer {
+  position: fixed;
+  bottom: 0;
+} */
+
+.header .content {
+  display: grid;
+  grid-template-columns: 1fr 8fr 1fr;
+}
+
+.footer .content {
+  display: grid;
+  grid-template-columns: 1fr 3fr 1.5fr 1.5fr 4fr 2fr;
+  color: white;
+  text-align: center;
+  font-size: 0.8em;
+  align-items: center;
+  height: 100%;
+}
+
+.footer .content a {
+  color: white;
+  text-decoration: none;
+  padding: 0.7em;
+}
+
+.footer .content .couponOwner a {
+  color: #b5d334;
+  text-decoration: none;
+  padding: 1.2em 2.5em;
+  border: 1px solid #b5d334;
+}
+
+.footer .content .space {
+  display: grid;
+  grid-template-columns: 1fr 8fr 1fr;
+}
