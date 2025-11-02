@@ -1,0 +1,382 @@
+* {
+  margin: 0;
+  padding: 0;
+  /* border: 1px solid red; */
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+}
+
+.main {
+  height: 1024px;
+  display: grid;
+  grid-template-rows: 96px 1fr 96px;
+  font-size: 0.8em;
+  width: 100vw;
+  background-color: white;
+}
+/* ===============.header  */
+.header {
+  display: grid;
+  place-items: center;
+  background-color: #080c12;
+}
+
+.header .content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: 90%;
+  max-width: 1156px;
+  align-items: center;
+}
+
+.logoImg {
+  justify-self: start;
+}
+.ddMenu {
+  justify-self: end;
+  align-self: center;
+  padding: 41px 0 41px 100px;
+}
+
+.ddMenu:hover {
+  cursor: pointer;
+}
+
+.bar1,
+.bar2,
+.bar3 {
+  width: 25px;
+  height: 2px;
+  background-color: #b5d334;
+  border-radius: 2px;
+  margin: 2px 0;
+}
+
+/*===============.dropdown*/
+
+.dropdown-content {
+  display: none;
+  grid-template-columns: 1fr 1156px 1fr;
+  grid-template-rows: repeat(7, auto);
+  background-image: url(./assets/bg-inoa.png);
+  background-repeat: repeat;
+  background-size: 100px;
+  z-index: 100;
+  font-size: 1.5em;
+  font-weight: bold;
+  font-style: italic;
+  position: fixed;
+  top: 96px;
+  left: 0;
+  width: 100vw;
+  height: calc(100vh - 96px);
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  color: white;
+  grid-column: 2/4;
+}
+
+.ddMenu:hover .dropdown-content {
+  display: grid;
+}
+
+.dropdown-content a:hover {
+  color: #b5d334;
+}
+
+/* ===============.container  */
+
+.bg {
+  background-image: url(./assets/menu/menu_bg_black.png);
+  background-repeat: repeat;
+  background-size: 550px;
+  opacity: 0.1;
+  width: 100%;
+  height: 100%;
+}
+
+.container {
+  display: grid;
+  place-items: center;
+  grid-template-columns: auto 1156px auto;
+}
+
+.article {
+  font-size: 1.3em;
+  padding: 70px;
+}
+
+.article a {
+  text-decoration: none;
+}
+
+.article h1 {
+  font-style: italic;
+  font-size: 2.5em;
+  margin-bottom: 20px;
+}
+
+.article li {
+  font-style: italic;
+  font-size: 1.2em;
+}
+
+.article label {
+  font-style: italic;
+  font-size: 1.2em;
+  font-weight: bold;
+}
+
+li {
+  margin: 5px 0;
+}
+
+ul,
+ol {
+  margin-top: 20px;
+}
+
+/* ===============.footer  */
+.footer {
+  width: 100vw;
+  display: grid;
+  place-items: center;
+  background-color: #080c12;
+}
+
+.footer .content {
+  display: grid;
+  grid-template-columns: 1fr 3fr 1.5fr 1.5fr 4fr 2fr;
+  color: white;
+  text-align: center;
+  align-items: center;
+  width: 90%;
+  max-width: 1156px;
+}
+
+.footer .content a {
+  color: white;
+  text-decoration: none;
+  padding: 0.4em;
+}
+
+.footer .content .couponOwner {
+  justify-self: end;
+}
+
+.footer .content .couponOwner a {
+  color: #b5d334;
+  text-decoration: none;
+  padding: 1.2rem 1.5rem;
+  border: 1px solid #b5d334;
+}
+
+.footer .content .space {
+  display: grid;
+  grid-template-columns: 1fr 8fr 1fr;
+}
+
+@media screen and (max-width: 1230px) {
+  .footer .content .couponOwner a {
+    padding: 1.2rem 1.4rem;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .header {
+    place-items: unset;
+  }
+
+  .header .content {
+    margin-left: 5%;
+  }
+
+  .container {
+    grid-template-columns: unset;
+  }
+  .bg {
+    display: none;
+  }
+
+  .footer .content .couponOwner a {
+    padding: 1.2rem 0.4rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .footer .content .couponOwner a {
+    padding: 1.2rem 0.1rem;
+  }
+
+  .main {
+    display: block;
+  }
+
+  .header {
+    place-items: unset;
+  }
+
+  .container {
+    display: grid;
+    grid-template-columns: 100%;
+  }
+
+  .green {
+    grid-column: 1/2;
+    grid-row: 2/3;
+    height: calc(100% - 30px);
+  }
+
+  .backImg {
+    grid-column: 1/2;
+    grid-row: 1/2;
+    background-image: url(./assets/header-photo-mob.jpg);
+  }
+  .backPat {
+    grid-column: 1/2;
+    grid-row: 2/3;
+  }
+
+  .wrapper {
+    grid-column: 1/2;
+    grid-row: 2/3;
+  }
+  .steps {
+    margin-top: 4rem;
+    margin-bottom: 1em;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    width: 86%;
+    margin-left: 43px;
+  }
+
+  .bar {
+    width: 83%;
+    margin-left: 42px;
+  }
+
+  .checkbox {
+    margin-top: 1em;
+    margin-left: 32px;
+  }
+
+  .checkbox-group {
+    margin-bottom: 5em;
+  }
+
+  .submit button {
+    margin: auto;
+  }
+
+  .backPat {
+    background-image: url("assets/bg-inoa.png");
+    background-repeat: repeat;
+    background-size: 100px;
+    margin-top: 24px;
+    height: 100%;
+  }
+
+  .footer .content {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+    margin-top: 30px;
+    padding-bottom: 40px;
+  }
+
+  .logoImg {
+    justify-self: unset;
+  }
+  .footer .content .couponOwner {
+    justify-self: unset;
+  }
+}
+@media screen and (max-width: 576px) {
+  .main {
+    display: block;
+  }
+
+  .header {
+    place-items: unset;
+  }
+
+  .container {
+    display: grid;
+    grid-template-columns: 100%;
+  }
+
+  .green {
+    grid-column: 1/2;
+    grid-row: 2/3;
+    height: calc(100% - 30px);
+  }
+
+  .backImg {
+    grid-column: 1/2;
+    grid-row: 1/2;
+    background-image: url(./assets/header-photo-mob.jpg);
+  }
+  .backPat {
+    grid-column: 1/2;
+    grid-row: 2/3;
+  }
+
+  .wrapper {
+    grid-column: 1/2;
+    grid-row: 2/3;
+  }
+  .steps {
+    margin-top: 4rem;
+    margin-bottom: 1em;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    width: 500px;
+    margin-left: 43px;
+  }
+
+  .bar {
+    width: 83%;
+    margin-left: 42px;
+  }
+
+  .checkbox {
+    margin-top: 1em;
+    margin-left: 32px;
+  }
+
+  .checkbox-group {
+    margin-bottom: 5em;
+  }
+
+  .submit button {
+    margin: auto;
+  }
+
+  .backPat {
+    background-image: url("assets/bg-inoa.png");
+    background-repeat: repeat;
+    background-size: 100px;
+    margin-top: 24px;
+    height: 100%;
+  }
+
+  .footer .content {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+    margin-top: 30px;
+    padding-bottom: 40px;
+  }
+
+  .logoImg {
+    justify-self: unset;
+  }
+  .footer .content .couponOwner {
+    justify-self: unset;
+  }
+}
