@@ -1,0 +1,571 @@
+* {
+  margin: 0;
+  padding: 0;
+  /* border: 1px solid red; */
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+}
+
+.main {
+  height: 1024px;
+  display: grid;
+  grid-template-rows: 96px 1fr 96px;
+  font-size: 0.8em;
+  width: 100vw;
+  background-color: white;
+}
+/* ===============.header  */
+.header {
+  display: grid;
+  place-items: center;
+  background-color: #080c12;
+}
+
+.logoImg {
+  justify-self: start;
+}
+.ddMenu {
+  justify-self: end;
+  align-self: center;
+  padding: 41px 0 41px 100px;
+}
+
+.ddMenu:hover {
+  cursor: pointer;
+}
+
+.bar1,
+.bar2,
+.bar3 {
+  width: 25px;
+  height: 2px;
+  background-color: #b5d334;
+  border-radius: 2px;
+  margin: 2px 0;
+}
+
+.header .content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: 90%;
+  max-width: 1156px;
+  align-items: center;
+}
+
+/*===============.dropdown*/
+
+.dropdown-content {
+  display: none;
+  grid-template-columns: 1fr 1156px 1fr;
+  grid-template-rows: repeat(7, auto);
+  background-image: url(./assets/bg-inoa.png);
+  background-repeat: repeat;
+  background-size: 100px;
+  z-index: 100;
+  font-size: 1.5em;
+  font-weight: bold;
+  font-style: italic;
+  position: fixed;
+  top: 96px;
+  left: 0;
+  width: 100vw;
+  height: calc(100vh - 96px);
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  color: white;
+  grid-column: 2/4;
+}
+
+.ddMenu:hover .dropdown-content {
+  display: grid;
+}
+
+.dropdown-content a:hover {
+  color: #b5d334;
+}
+
+/* ===============.container  */
+.container {
+  display: grid;
+  grid-template-columns: 1fr repeat(10, 115px) 1fr;
+  grid-template-rows: repeat(2, 1fr);
+}
+
+.backImg {
+  grid-column: 1/8;
+  grid-row: 1/3;
+  background-image: url("assets/header-map-3x.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.green {
+  grid-column: 6/13;
+  grid-row: 1/2;
+  background-color: #b5d334;
+}
+
+.backPat {
+  grid-column: 5/13;
+  grid-row: 1/3;
+  background-image: url("assets/group-3x.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin: 24px 0px;
+}
+/* ===============.wrapper  */
+.wrapper {
+  grid-column: 8/12;
+  grid-row: 1/3;
+  color: white;
+}
+
+.steps {
+  margin-top: 165px;
+  margin-bottom: 1em;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+.step {
+  padding: 5px 0;
+}
+
+#step1 {
+  border-bottom: 4px solid #b5d334;
+}
+
+#step2 {
+  text-align: center;
+  border-bottom: 4px solid #b5d334;
+}
+#step3 {
+  text-align: right;
+  border-bottom: 4px solid #b5d334;
+}
+
+.congrats h2 {
+  margin-top: 35px;
+  font-size: 3em;
+  font-style: italic;
+}
+
+.congrats p {
+  margin-top: 35px;
+}
+.submit {
+  display: grid;
+}
+
+.print {
+  margin-top: 55px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  place-items: center;
+}
+
+.print a {
+  color: white;
+  font-weight: 800;
+  text-decoration: none;
+}
+
+.print img {
+  margin-right: 5px;
+}
+
+.printMob {
+  display: none;
+}
+
+.submit button {
+  background-color: #b5d334;
+  color: white;
+  border: none;
+  padding: 1.2rem 1.6rem;
+  cursor: pointer;
+  font-weight: bold;
+  text-align: right;
+  margin-left: auto;
+  margin-top: 50px;
+}
+
+/*=================. coupon*/
+.couponItem {
+  display: grid;
+  grid-template-rows: 1fr auto;
+  font-size: 1.2em;
+  margin-bottom: 155px;
+  grid-row: 2/3;
+  grid-column: 3/4;
+}
+
+.couponItemImg {
+  display: grid;
+  grid-template-columns: 160px 350px;
+  grid-template-rows: 1fr;
+  place-items: flex-start;
+  text-align: left;
+}
+
+.couponItemImg img {
+  grid-column: 1/2;
+  grid-row: 1/2;
+}
+
+.couponItemImg h3 {
+  grid-column: 1/2;
+  grid-row: 1/2;
+  margin-top: 30px;
+  margin-left: 20px;
+  color: white;
+  font-size: 3em;
+  font-style: italic;
+}
+
+.couponItemImg .couponText {
+  grid-column: 2/3;
+  grid-row: 1/2;
+  margin-top: 35px;
+  margin-left: 40px;
+  display: grid;
+  font-size: 3em;
+  font-weight: bold;
+  font-style: italic;
+}
+
+.couponItemMob {
+  display: none;
+}
+
+.couponItemMob .couponItemImg .couponText {
+  font-size: 1.1em;
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* ===============.footer  */
+.footer {
+  width: 100vw;
+  display: grid;
+  place-items: center;
+  background-color: #080c12;
+}
+
+.footer .content {
+  display: grid;
+  grid-template-columns: 1fr 3fr 1.5fr 1.5fr 4fr 2fr;
+  color: white;
+  text-align: center;
+  align-items: center;
+  width: 90%;
+  max-width: 1156px;
+}
+
+.footer .content a {
+  color: white;
+  text-decoration: none;
+  padding: 0.4em;
+}
+
+.footer .content .couponOwner {
+  justify-self: end;
+}
+
+.footer .content .couponOwner a {
+  color: #b5d334;
+  text-decoration: none;
+  padding: 1.2rem 1.5rem;
+  border: 1px solid #b5d334;
+}
+
+.footer .content .space {
+  display: grid;
+  grid-template-columns: 1fr 8fr 1fr;
+}
+
+@media screen and (max-width: 1230px) {
+  .footer .content .couponOwner a {
+    padding: 1.2rem 1.4rem;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .header {
+    place-items: unset;
+  }
+
+  .header .content {
+    margin-left: 28px;
+    width: 80%;
+  }
+
+  .wrapper {
+    grid-column: 7/10;
+  }
+
+  .couponItemImg img {
+    height: 208px;
+    width: 400px;
+  }
+
+  .couponItemImg h3 {
+    margin-top: 30px;
+    margin-left: 5px;
+  }
+
+  .couponItemImg .couponText {
+    margin-top: 30px;
+    margin-left: 0px;
+  }
+
+  .footer .content .couponOwner a {
+    padding: 1.2rem 0.4rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .footer .content .couponOwner a {
+    padding: 1.2rem 0.1rem;
+  }
+
+  .main {
+    display: block;
+  }
+
+  .header {
+    place-items: unset;
+  }
+
+  .header .content {
+    margin-left: 80px;
+  }
+
+  .container {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 0.65fr 1fr;
+  }
+
+  .green {
+    grid-column: 1/2;
+    grid-row: 2/3;
+    height: calc(100% - 30px);
+  }
+
+  .backImg {
+    grid-column: 1/2;
+    grid-row: 1/2;
+  }
+  .backPat {
+    grid-column: 1/2;
+    grid-row: 2/3;
+  }
+
+  .wrapper {
+    grid-column: 1/2;
+    grid-row: 2/3;
+  }
+
+  .congrats {
+    width: 80%;
+    margin-left: 10%;
+  }
+  .steps {
+    margin-top: 4rem;
+    margin-bottom: 1em;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    width: 86%;
+    margin-left: 43px;
+  }
+
+  .submit {
+    margin-top: 50px;
+  }
+  .submit button {
+    margin: auto;
+  }
+
+  .backPat {
+    background-image: url("assets/bg-inoa.png");
+    background-repeat: repeat;
+    background-size: 100px;
+    margin-top: 24px;
+    height: 100%;
+  }
+
+  .couponItem {
+    display: none;
+  }
+
+  .couponItemMob {
+    display: grid;
+    font-size: 1.2em;
+    margin: 50px 0px 20px 30px;
+    place-items: center;
+  }
+
+  .print {
+    display: none;
+  }
+
+  .printMob {
+    display: grid;
+    place-items: center;
+  }
+
+  .printMob a {
+    font-weight: 800;
+    text-decoration: none;
+    color: black;
+    margin: 20px auto;
+  }
+
+  .printMob img {
+    margin-right: 5px;
+  }
+
+  .footer .content {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+    margin-top: 30px;
+    padding-bottom: 40px;
+  }
+
+  .logoImg {
+    justify-self: unset;
+  }
+  .footer .content .couponOwner {
+    justify-self: unset;
+  }
+}
+@media screen and (max-width: 576px) {
+  .main {
+    display: block;
+  }
+
+  .header {
+    place-items: unset;
+  }
+
+  .header .content {
+    margin-left: 60px;
+  }
+
+  .container {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 0.65fr 1fr;
+  }
+
+  .green {
+    grid-column: 1/2;
+    grid-row: 2/3;
+    height: calc(100% - 30px);
+  }
+
+  .backImg {
+    grid-column: 1/2;
+    grid-row: 1/2;
+  }
+  .backPat {
+    grid-column: 1/2;
+    grid-row: 2/3;
+  }
+
+  .wrapper {
+    grid-column: 1/2;
+    grid-row: 2/3;
+  }
+  .steps {
+    margin-top: 4rem;
+    margin-bottom: 1em;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    width: 500px;
+    margin-left: 43px;
+  }
+
+  .bar {
+    width: 83%;
+    margin-left: 42px;
+  }
+
+  .checkbox {
+    margin-top: 1em;
+    margin-left: 32px;
+  }
+
+  .checkbox-group {
+    margin-bottom: 5em;
+  }
+
+  .submit button {
+    margin: auto;
+  }
+
+  .backPat {
+    background-image: url("assets/bg-inoa.png");
+    background-repeat: repeat;
+    background-size: 100px;
+    margin-top: 24px;
+    height: 100%;
+  }
+
+  .congrats {
+    width: 80%;
+    margin-left: 10%;
+  }
+
+  .couponItem {
+    display: none;
+  }
+
+  .couponItemMob {
+    display: grid;
+    font-size: 1.2em;
+    margin: 50px 0px 30px 0px;
+    place-items: center;
+  }
+
+  .print {
+    display: none;
+  }
+
+  .printMob {
+    display: grid;
+    place-items: center;
+  }
+
+  .printMob a {
+    font-weight: 800;
+    text-decoration: none;
+    color: black;
+    margin: 20px auto;
+  }
+
+  .printMob img {
+    margin-right: 5px;
+  }
+
+  .footer .content {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+    margin-top: 30px;
+    padding-bottom: 40px;
+  }
+
+  .logoImg {
+    justify-self: unset;
+  }
+  .footer .content .couponOwner {
+    justify-self: unset;
+  }
+}
