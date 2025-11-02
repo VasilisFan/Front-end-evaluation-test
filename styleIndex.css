@@ -50,6 +50,7 @@ body {
   display: grid;
   grid-template-columns: 1fr 1fr;
   width: 90%;
+  margin-left: 5%;
   max-width: 1156px;
   align-items: center;
 }
@@ -94,7 +95,7 @@ body {
 /* ===============.container  */
 .container {
   display: grid;
-  grid-template-columns: 1fr repeat(10, 115px) 1fr;
+  grid-template-columns: 1fr repeat(10, 125px) 1fr;
   grid-template-rows: 1fr 1fr;
 }
 
@@ -205,6 +206,7 @@ input:focus {
   text-align: center;
   align-items: center;
   width: 90%;
+  margin-left: 5%;
   max-width: 1156px;
 }
 
@@ -231,6 +233,10 @@ input:focus {
 }
 
 @media screen and (max-width: 1230px) {
+  .container {
+    display: grid;
+    grid-template-columns: 1fr repeat(10, 108px) 1fr;
+  }
   .footer .content .couponOwner a {
     padding: 1.2rem 1.4rem;
   }
@@ -242,10 +248,13 @@ input:focus {
   }
 
   .header .content {
-    margin-left: 28px;
-    width: 80%;
+    width: 74%;
   }
 
+  .container {
+    display: grid;
+    grid-template-columns: 1fr repeat(10, 118px) 1fr;
+  }
   .wrapper {
     grid-column: 7/10;
   }
@@ -279,7 +288,7 @@ input:focus {
   }
 
   .header .content {
-    margin-left: 80px;
+    width: 90%;
   }
 
   .container {
@@ -365,9 +374,8 @@ input:focus {
   .header {
     place-items: unset;
   }
-
   .header .content {
-    margin-left: 60px;
+    width: 90%;
   }
 
   .container {

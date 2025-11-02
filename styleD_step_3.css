@@ -302,8 +302,8 @@ body {
   }
 
   .header .content {
-    margin-left: 28px;
-    width: 80%;
+    width: 77%;
+    margin-left: 5%;
   }
 
   .wrapper {
@@ -344,7 +344,7 @@ body {
   }
 
   .header .content {
-    margin-left: 80px;
+    width: 90%;
   }
 
   .container {
@@ -453,10 +453,6 @@ body {
 
   .header {
     place-items: unset;
-  }
-
-  .header .content {
-    margin-left: 60px;
   }
 
   .container {
