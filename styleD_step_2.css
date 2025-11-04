@@ -403,12 +403,12 @@ input:focus {
     margin-bottom: 1em;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    width: 88%;
-    margin-left: 43px;
+    width: 90%;
+    margin-left: 5%;
   }
   .congrats {
     max-width: 90%;
-    margin-left: 50px;
+    margin-left: 9%;
   }
 
   .inputs p {
@@ -472,7 +472,6 @@ input:focus {
   .container {
     display: grid;
     grid-template-columns: 100%;
-    grid-template-rows: 0.65fr 1fr;
   }
 
   .green {
@@ -500,18 +499,11 @@ input:focus {
     margin-bottom: 1em;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    width: 500px;
-    margin-left: 43px;
   }
 
   .bar {
     width: 87%;
     margin-left: 0;
-  }
-
-  .congrats {
-    max-width: 90%;
-    margin-left: 50px;
   }
 
   .inputs p {
