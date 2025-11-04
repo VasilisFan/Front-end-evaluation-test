@@ -120,7 +120,7 @@
       const submitButton = document.querySelector(".submit button");
 
       submitButton.addEventListener("click", function () {
-        // Simple form validation
+
         const name = document.getElementById("name").value.trim();
         const surname = document.getElementById("surname").value.trim();
         const email = document.getElementById("email").value.trim();
@@ -147,20 +147,7 @@
           return;
         }
 
-        // If validation passes, redirect to step 2
         window.location.href = "d_step_2.html";
-
-        ///////////////////
-        // fetch("https://ipinfo.io/json?token=YOUR_TOKEN_HERE")
-        // .then((response) => response.json())
-        // .then((data) => {
-        //   console.log("User location data:", data);
-        //   // You can use this data to pre-fill location-based fields if needed
-        // })
-        // .catch((error) => {
-        //   console.error("Error fetching location data:", error);
-        // });
-
 
 
 
